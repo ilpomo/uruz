@@ -1,14 +1,5 @@
-from numpy import pi, sin, cos
 from src import *
 from typing import Literal
-
-
-def force_function(
-    x: int | float,
-    y: int | float
-) -> int | float:
-
-    return cos(pi * x * cos(x)) * sin(pi * y * sin(y))
 
 
 def main(
@@ -18,6 +9,7 @@ def main(
     y_max: int | float,
     x_div: int | float,
     y_div: int | float,
+    force_function: callable,
     plot: Literal["2D", "3D"]
 ) -> None:
 
@@ -80,7 +72,8 @@ if __name__ == "__main__":
         x_max=10,
         y_min=0,
         y_max=10,
-        x_div=100,
-        y_div=100,
+        x_div=250,
+        y_div=250,
+        force_function=sine_wave_pattern,
         plot="3D"
     )

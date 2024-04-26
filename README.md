@@ -1,7 +1,7 @@
 # Finite Element Method (FEM) for Poisson's Equation
 
-This repository contains an implementation of the Finite Element Method (FEM) to solve the Poisson equation on a 
-rectangular domain. The code is written in Python, utilizing NumPy, SciPy and Matplotlib for calculations and 
+This repository contains an implementation of the Finite Element Method (FEM) to solve the Poisson's equation on a 
+rectangular domain. The code is written in Python utilizing NumPy, SciPy and Matplotlib for calculations and 
 visualizations.
 
 ## Overview
@@ -10,7 +10,7 @@ The Finite Element Method (FEM) is a numerical technique used to approximate sol
 partial differential equations (PDEs). It subdivides a large problem into smaller, simpler parts that are called finite 
 elements.
 
-This project specifically addresses the Poisson equation, commonly used in electromagnetism, fluid dynamics, and other 
+This project specifically addresses the Poisson's equation, commonly used in electromagnetism, fluid dynamics, and other 
 fields.
 
 ## Dependencies
@@ -20,7 +20,7 @@ list of required dependencies:
 
 - **NumPy**: for efficient numerical array operations.
 - **SciPy**: used for sparse matrix operations and solving linear systems.
-- **Matplotlib**: for generating visualizations of the FEM results.
+- **Matplotlib**: for generating 2D and 3D visualizations of the FEM results.
 
 ### Installing Dependencies
 
@@ -31,8 +31,8 @@ run the following command:
 pip install numpy scipy matplotlib
 ```
 
-Alternatively, you can use a requirements file, `requirements.txt`, which lists all the necessary libraries. Simply run 
-the following command to install all dependencies at once:
+Alternatively, you can use the included requirements file, `requirements.txt`, which lists all the necessary libraries. 
+Simply run the following command to install all dependencies at once:
 
 ```bash
 pip install -r requirements.txt
@@ -98,12 +98,45 @@ much each node moves or what its potential is.
 **Explanation**: we draw a map showing how high or low each point on the paper is, using colors to show different 
 heights or potentials.
 
-## Example
+## Examples
 
-These images show the results of the Finite Element Method simulation: the left image represents the 2D plot of the 
-solution, and the right image represents the 3D plot of the solution.
+### Gaussian Heat Source
+
+This function simulates a localized heat source or sink, ideal for modeling phenomena such as concentrated heat or 
+energy sources within a specified area.
 
 <p float="left">
-  <img src="images/2D.png" width="400"/>
-  <img src="images/3D.png" width="400"/> 
+  <img src="images/gaussian_heat_source_2d.png" width="400"/>
+  <img src="images/gaussian_heat_source_3d.png" width="400"/> 
+</p>
+
+### Multi-Wave Interference
+
+This function generates a multi-wave interference pattern using a combination of sine and cosine waves with varying 
+frequencies and phases. It's designed to model phenomena where multiple wave sources interact, such as in water waves, 
+sound waves, or electromagnetic fields.
+
+<p float="left">
+  <img src="images/multi_wave_interference_2d.png" width="400"/>
+  <img src="images/multi_wave_interference_3d.png" width="400"/> 
+</p>
+
+### Radial Symmetric Function
+
+This function models radial effects like a pressure or gravitational field emanating from or concentrating towards a 
+central point.
+
+<p float="left">
+  <img src="images/radial_symmetric_function_2d.png" width="400"/>
+  <img src="images/radial_symmetric_function_3d.png" width="400"/> 
+</p>
+
+### Sine Wave Pattern
+
+This function creates a sinusoidal pattern over the domain, useful for simulating periodic processes like waves or 
+oscillations across a surface.
+
+<p float="left">
+  <img src="images/sine_wave_pattern_2d.png" width="400"/>
+  <img src="images/sine_wave_pattern_3d.png" width="400"/> 
 </p>
